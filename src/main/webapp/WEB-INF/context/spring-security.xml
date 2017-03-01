@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+    <http auto-config="true">
+        <intercept-url pattern="/" access="permitAll"/>
+        <intercept-url pattern="/sales/**" access="hasRole('SALES')"/>
+        <intercept-url pattern="/backoffice/**" access="hasRole('BACKOFFICE')"/>
+        <intercept-url pattern="/teacher/**" access="hasRole('TEACHER')"/>
+        <intercept-url pattern="/director/**" access="hasRole('DIRECTOR')"/>
+        <intercept-url pattern="/student/**" access="hasRole('STUDENT')"/>
+        <intercept-url pattern="/interns/**" access="hasRole('INTERNS')"/>
+
+        <form-login login-page="/login"
+                    username-parameter="ssoId"
+                    password-parameter="password" default-target-url="/dashboard"
+                    authentication-failure-url="/loginerror"/>
+
+        <access-denied-handler error-page="/Access_Denied"/>
+        <csrf/>
+    </http>
+
+    <beans:bean id="bcryptEncoder"
+                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <beans:bean id="customUserDetailsService"
+                class="vn.hackademics.qlhvtts.service.CustomUserDetailsService"></beans:bean>
+
+    <authentication-manager>
+        <authentication-provider user-service-ref="customUserDetailsService">
+            <password-encoder ref="bcryptEncoder"/>
+        </authentication-provider>
+    </authentication-manager>
+</beans:beans>

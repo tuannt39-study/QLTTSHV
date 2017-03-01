@@ -1,0 +1,45 @@
+.SearchBar{
+    border-radius: 5px;
+    height: 30px;
+    min-width: 50px;
+    padding-left: 2px;
+}
+.SearchBar:active{
+    box-shadow: 10px 20px 20px #aab7d1 ;
+}
+.SearchBar:hover{
+    box-shadow: 10px 20px 20px #aab7d1 ;
+}
+#icon-add-object{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.btn-add-new{
+    font-size: 40px;
+    float: right;
+    /*position: fixed;*/
+    left: 90%;
+    z-index: 20;
+    top: 90%;
+}
+#form-add-new{
+    position: fixed;
+    box-shadow: 20px 20px 20px #aab7d1;
+    z-index: 50;
+    /*background-color: #2e6da4;*/
+    height: 100vh;
+    /*opacity: 0.2;*/
+}
+#form-add-new-center{
+    float: left;
+    background-color: #bce8f1;
+    border-radius: 5px ;
+    border:solid 2px red;
+    z-index: 51;
+}
+.cancel{
+    /*opacity: 0.2;*/
+    /*background-color: red;*/
+    height: 100vh;
+}
