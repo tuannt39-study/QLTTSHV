@@ -248,7 +248,7 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="tables.html"></i>Thực Tập Sinh</a>
+                    <a href="/thuctapsinh"></i>Thực Tập Sinh</a>
                 </li>
                 <li>
                     <a href="/danhsachgiangvien">Giảng Viên</a>
@@ -314,7 +314,7 @@
                     <a href="#">Đối Tác<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="blank.html">Blank Page</a>
+                            <a href="/doitac">Thông Tin Đối Tác</a>
                         </li>
                         <li>
                             <a href="login.html">Login Page</a>

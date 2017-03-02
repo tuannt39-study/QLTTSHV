@@ -1,8 +1,9 @@
 .SearchBar{
     border-radius: 5px;
-    height: 30px;
+    height: 35px;
     min-width: 50px;
     padding-left: 2px;
+    margin-left: 20px;
 }
 .SearchBar:active{
     box-shadow: 10px 20px 20px #aab7d1 ;

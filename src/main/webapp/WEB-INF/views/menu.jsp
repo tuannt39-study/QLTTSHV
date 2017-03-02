@@ -311,10 +311,10 @@
                     <a href="#">Đối Tác<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="blank.html">Blank Page</a>
+                            <a href="/doitac">Đối Tác</a>
                         </li>
                         <li>
-                            <a href="login.html">Login Page</a>
+                            <a href="/thongtinthuctapsinh">Login Page</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
