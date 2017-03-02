@@ -8738,6 +8738,9 @@ legend {
     padding: 10px 0px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
+    border: 1px solid #4582ec;
+    background: #4582ec;
+    border-radius: 10px;
 }
 
 .list-movie-filter .list-movie-filter-main{

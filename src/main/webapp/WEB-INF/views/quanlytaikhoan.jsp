@@ -14,6 +14,23 @@
 <body>
 <jsp:include page="menu.jsp"></jsp:include>
 
+<!-- jQuery -->
+<script src="../static/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../static/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../static/css/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="../static/js/raphael.min.js"></script>
+<script src="../static/js/morris.min.js"></script>
+<script src="../static/js/morris-data.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../static/js/sb-admin-2.js"></script>
+
 <div id="page-wrapper">
 
     <div class="row">
@@ -65,7 +82,7 @@
         <div class="list-movie-filter-main">
             <form id="form-filter" class="form-inline" method="GET" action="filter/">
                 <div class="list-movie-filter-item">
-                    <label for="filter-sort">Tìm kiếm tên or mã</label>
+                    <label for="filter-sort">Tìm kiếm tên hoặc mã</label>
                     <input type="text" class="form-control" placeholder="Tìm kiếm...">
                 </div>
 
@@ -155,21 +172,6 @@
     <%--danh-sach-tai-khoan--%>
 </div>
 <%--body-quanly-taikhoan--%>
-<!-- jQuery -->
-<script src="../static/js/jquery.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="../static/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Plugin JavaScript -->
-<script src="../static/css/metisMenu.min.js"></script>
-
-<!-- Morris Charts JavaScript -->
-<script src="../static/js/raphael.min.js"></script>
-<script src="../static/js/morris.min.js"></script>
-<script src="../static/js/morris-data.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="../static/js/sb-admin-2.js"></script>
 </body>
 </html>

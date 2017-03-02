@@ -7465,9 +7465,9 @@ button.close {
 /* css navbar-brand-logo */
 .navbar-brand-logo {
     float: left;
-    margin: 5px 0 5px 5px;
-    height: 10%;
-    width: 243px;
+    margin: 1px 0 11px 1px;
+    width: 250px;
+    height: 38px;
 }
 
 /* sidebar-menu */

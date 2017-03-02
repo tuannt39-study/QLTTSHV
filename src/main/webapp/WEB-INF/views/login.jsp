@@ -14,7 +14,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Đăng nhập | Hackademics Hà Nội</title>
+    <title>Đăng nhập | HackademicsHanoi</title>
     <style>
         @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
