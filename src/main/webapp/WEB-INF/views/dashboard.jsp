@@ -6,21 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <jsp:include page="head-html.jsp"></jsp:include>
-
-</head>
-
-<body>
-
-<div id="wrapper">
-
-    <!-- Navigation -->
-    <jsp:include page="menu.jsp"></jsp:include>
 
     <div id="page-wrapper">
         <div class="row">
@@ -603,8 +588,6 @@
     </div>
     <!-- /#page-wrapper -->
 
-</div>
-<!-- /#wrapper -->
 
 <!-- jQuery -->
 <script src="../static/js/jquery.min.js"></script>
@@ -622,7 +605,3 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="../static/js/sb-admin-2.js"></script>
-
-</body>
-
-</html>

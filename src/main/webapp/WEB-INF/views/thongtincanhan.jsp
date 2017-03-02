@@ -7,20 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<html lang="en">
-
-<head>
-
-    <jsp:include page="head-html.jsp"></jsp:include>
-
-</head>
-
-<body>
-
-<div id="wrapper">
-
-    <!-- Navigation -->
-    <jsp:include page="menu.jsp"></jsp:include>
 
     <div id="page-wrapper">
 
@@ -181,8 +167,6 @@
     </div>
     <!-- /#page-wrapper -->
 
-</div>
-<!-- /#wrapper -->
 
 <!-- jQuery -->
 <script src="../static/js/jquery.min.js"></script>

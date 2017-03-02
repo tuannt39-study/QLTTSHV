@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="default" template="/WEB-INF/views/tiles/layout/default-layout.jsp">
+        <put-attribute name="title" value=""></put-attribute>
+        <put-attribute name="header" value="/WEB-INF/views/tiles/layout/default-head.jsp"></put-attribute>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/layout/default-menu.jsp"></put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+    </definition>
+    <definition name="login" template="/WEB-INF/views/login.jsp">
+
+    </definition>
+
+    <definition name="danhsachgiangvien" extends="default">
+        <put-attribute name="title" value="Danh Sách Giảng Viên"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/danhsachgiangvien.jsp"></put-attribute>
+    </definition>
+    <definition name="thongtingiangvien" extends="default">
+        <put-attribute name="title" value="Thông tin giảng viên"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/thongtingiangvien.jsp"></put-attribute>
+    </definition>
+    <definition name="capnhatgiangvien" extends="default">
+        <put-attribute name="title" value="Cập nhật giảng viên"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/capnhatgiangvien.jsp"></put-attribute>
+    </definition>
+    <definition name="thongtincanhan" extends="default">
+        <put-attribute name="title" value="Thông tin cá nhân"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/thongtincanhan.jsp"></put-attribute>
+    </definition>
+    <definition name="hocphi" extends="default">
+        <put-attribute name="title" value="Học phí"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/hocphi.jsp"></put-attribute>
+    </definition>
+    <definition name="dashboard" extends="default">
+        <put-attribute name="title" value="Hackademic Hà Nội"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/dashboard.jsp"></put-attribute>
+    </definition>
+    <!--<definition name="danhsachlophoc" extends="default">
+        <put-attribute name="title" value="Danh sách lớp học"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/danhsachlophoc.jsp"></put-attribute>
+    </definition>
+    <definition name="chitietlophoc" extends="default">
+        <put-attribute name="title" value="Chi tiết lớp học"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/chitietlophoc.jsp"></put-attribute>
+    </definition>-->
+</tiles-definitions>

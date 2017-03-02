@@ -251,34 +251,11 @@
                     <a href="tables.html"></i>Thực Tập Sinh</a>
                 </li>
                 <li>
-                    <a href="/danhsachgiangvien">Giảng Viên</a>
+                    <a href="/danhsachgiangvien">Giảng Viên - Trợ Giảng</a>
                 </li>
+
                 <li>
-                    <a href="forms.html">Trợ Giảng</a>
-                </li>
-                <li>
-                    <a href="#">Lớp Học<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="panels-wells.html">Lịch học</a>
-                        </li>
-                        <li>
-                            <a href="buttons.html">Buttons</a>
-                        </li>
-                        <li>
-                            <a href="notifications.html">Buttons</a>
-                        </li>
-                        <li>
-                            <a href="typography.html">Buttons</a>
-                        </li>
-                        <li>
-                            <a href="icons.html"> Buttons</a>
-                        </li>
-                        <li>
-                            <a href="grid.html">Buttons</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
+                    <a href="#">Lớp Học</a>
                 </li>
                 <li>
                     <a href="#">Học viên<span class="fa arrow"></span></a>
