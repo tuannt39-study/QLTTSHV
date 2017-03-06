@@ -10,21 +10,18 @@
 <!-- Bootstrap Core CSS -->
 <link href="../static/css/dashboard.min.css" rel="stylesheet">
 
-
 <!-- MetisMenu CSS -->
-<link href="../static/css/metisMenu.css" rel="stylesheet">
+<link href="../static/css/metisMenu.min.css" rel="stylesheet">
 
 <!-- DataTables CSS -->
-<link href="../static/css/dataTables.bootstrap.css" rel="stylesheet">
+<link href="../static/css/dataTables.bootstrap.min.css" rel="stylesheet">
 
 <!-- DataTables Responsive CSS -->
 <link href="../static/css/dataTables.responsive.css" rel="stylesheet">
+<link href="../static/css/datepicker.css" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="../static/css/admin.min.css" rel="stylesheet">
-
-<!-- Morris Charts CSS -->
-<link href="../static/css/morris.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
 <link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">

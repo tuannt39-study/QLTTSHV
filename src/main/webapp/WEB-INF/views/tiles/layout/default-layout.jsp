@@ -25,16 +25,42 @@
 <script src="../static/js/jquery.dataTables.min.js"></script>
 <script src="../static/js/dataTables.bootstrap.min.js"></script>
 <script src="../static/js/dataTables.responsive.js"></script>
+<script src="../static/js/bootstrap-datepicker.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="../static/js/sb-admin-2.js"></script>
+<script src="../static/js/sb-admin-2.min.js"></script>
 
-<!-- Page-Level Demo Scripts - Tables - Use for reference -->
 <script>
     $(document).ready(function () {
         $('#dataTables-example').DataTable({
             responsive: true
         });
     });
+</script>
+
+<script>
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+    var checkin = $('#dpd1').datepicker({
+        onRender: function (date) {
+            return date.valueOf() < now.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function (ev) {
+        if (ev.date.valueOf() > checkout.date.valueOf()) {
+            var newDate = new Date(ev.date)
+            newDate.setDate(newDate.getDate() + 1);
+            checkout.setValue(newDate);
+        }
+        checkin.hide();
+        $('#dpd2')[0].focus();
+    }).data('datepicker');
+    var checkout = $('#dpd2').datepicker({
+        onRender: function (date) {
+            return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function (ev) {
+        checkout.hide();
+    }).data('datepicker');
 </script>
 </html>

@@ -1,495 +1,857 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <jsp:include page="head-html.jsp"></jsp:include>
-
-</head>
-
-<body>
-
 <div id="wrapper">
 
-    <!-- Navigation -->
-    <jsp:include page="menu.jsp"></jsp:include>
+    <div id="page-wrapper">
 
-	
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Học Phí</h1>
-                </div>
-                <!-- /.col-lg-12 -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Học Phí</h1>
             </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Tìm theo mã lớp học: 201701JAVA01
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <form role="form">
+                                        <div class="col-lg-3">
+                                            <select class="form-control">
+                                                <option value="namhoc" selected>- Năm học -</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <select class="form-control">
+                                                <option value="ngonngu" selected>- Ngôn ngữ -</option>
+                                                <option value="java">JAVA</option>
+                                                <option value="android">ANDROID</option>
+                                                <option value="php">PHP</option>
+                                                <option value="uxui">UX/UI</option>
+                                                <option value="namhoc">TESTER</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <select class="form-control">
+                                                <option value="lophoc" selected>- Lớp học -</option>
+                                                <option value="h16jb1">H16JB1</option>
+                                                <option value="h16jb2">H16JB2</option>
+                                                <option value="h16jb3">H16JB3</option>
+                                                <option value="h16jb4">H16JB4</option>
+                                                <option value="h16jb5">H16JB5</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-12 -->
+                            </div>
+                            <!-- /.panel-body -->
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <form role="form">
+                                        <div class="col-lg-4">
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon">Mã học viên</span>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon">Tên học viên</span>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-12 -->
+                            </div>
+                            <!-- /.panel-body -->
+
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <div class="form">
+                                        <div class="col-lg-12"><label>Học viên nộp học phí dự kiến:</label></div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon">Từ</span>
+                                                <input type="text" class="form-control" id="dpd1">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon">đến</span>
+                                                <input type="text" class="form-control" id="dpd2">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <button type="button" class="btn btn-primary btn-circle btn-lg"><i
+                                                    class="fa  fa-search "></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-12 -->
+                            </div>
+                            <!-- /.panel-body -->
+
                         </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Tìm theo mã lớp học: H16JB1
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
                         <table width="100%" class="table table-striped table-bordered table-hover"
                                id="dataTables-example">
-                                <thead>
-                                    <tr>
-                                        <th>Mã Học Viên</th>
-                                        <th>Họ Và Tên</th>
-                                        <th>Mã Lớp Học</th>
-                                        <th>Học Bổng</th>
-                                        <th>Học Phí</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="odd gradeX">
-                                        <td>201701HV001</td>
-                                        <td>Nguyễn Văn A</td>
-                                        <td>201701JAVA01</td>
-                                        <td>0%</td>
-                                        <td>Đã hoàn thành</td>
-                                    </tr>
-                                    <tr class="even gradeC">
-                                        <td>201701HV002</td>
-                                        <td>Nguyễn Thị B</td>
-                                        <td>201701JAVA01</td>
-                                        <td>50%</td>
-                                        <td>Chưa hoàn thành</td>
-                                    </tr>
-                                    <tr class="odd gradeA">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 5.5</td>
-                                        <td>Win 95+</td>
-                                        <td class="center">5.5</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="even gradeA">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 6</td>
-                                        <td>Win 98+</td>
-                                        <td class="center">6</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="odd gradeA">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 7</td>
-                                        <td>Win XP SP2+</td>
-                                        <td class="center">7</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="even gradeA">
-                                        <td>Trident</td>
-                                        <td>AOL browser (AOL desktop)</td>
-                                        <td>Win XP</td>
-                                        <td class="center">6</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Firefox 1.0</td>
-                                        <td>Win 98+ / OSX.2+</td>
-                                        <td class="center">1.7</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Firefox 1.5</td>
-                                        <td>Win 98+ / OSX.2+</td>
-                                        <td class="center">1.8</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Firefox 2.0</td>
-                                        <td>Win 98+ / OSX.2+</td>
-                                        <td class="center">1.8</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Firefox 3.0</td>
-                                        <td>Win 2k+ / OSX.3+</td>
-                                        <td class="center">1.9</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Camino 1.0</td>
-                                        <td>OSX.2+</td>
-                                        <td class="center">1.8</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Camino 1.5</td>
-                                        <td>OSX.3+</td>
-                                        <td class="center">1.8</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Netscape 7.2</td>
-                                        <td>Win 95+ / Mac OS 8.6-9.2</td>
-                                        <td class="center">1.7</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Netscape Browser 8</td>
-                                        <td>Win 98SE+</td>
-                                        <td class="center">1.7</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Netscape Navigator 9</td>
-                                        <td>Win 98+ / OSX.2+</td>
-                                        <td class="center">1.8</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Mozilla 1.0</td>
-                                        <td>Win 95+ / OSX.1+</td>
-                                        <td class="center">1</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Mozilla 1.1</td>
-                                        <td>Win 95+ / OSX.1+</td>
-                                        <td class="center">1.1</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Mozilla 1.2</td>
-                                        <td>Win 95+ / OSX.1+</td>
-                                        <td class="center">1.2</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Mozilla 1.3</td>
-                                        <td>Win 95+ / OSX.1+</td>
-                                        <td class="center">1.3</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Mozilla 1.4</td>
-                                        <td>Win 95+ / OSX.1+</td>
-                                        <td class="center">1.4</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Mozilla 1.5</td>
-                                        <td>Win 95+ / OSX.1+</td>
-                                        <td class="center">1.5</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Mozilla 1.6</td>
-                                        <td>Win 95+ / OSX.1+</td>
-                                        <td class="center">1.6</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Mozilla 1.7</td>
-                                        <td>Win 98+ / OSX.1+</td>
-                                        <td class="center">1.7</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Mozilla 1.8</td>
-                                        <td>Win 98+ / OSX.1+</td>
-                                        <td class="center">1.8</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Seamonkey 1.1</td>
-                                        <td>Win 98+ / OSX.2+</td>
-                                        <td class="center">1.8</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Gecko</td>
-                                        <td>Epiphany 2.20</td>
-                                        <td>Gnome</td>
-                                        <td class="center">1.8</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Webkit</td>
-                                        <td>Safari 1.2</td>
-                                        <td>OSX.3</td>
-                                        <td class="center">125.5</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Webkit</td>
-                                        <td>Safari 1.3</td>
-                                        <td>OSX.3</td>
-                                        <td class="center">312.8</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Webkit</td>
-                                        <td>Safari 2.0</td>
-                                        <td>OSX.4+</td>
-                                        <td class="center">419.3</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Webkit</td>
-                                        <td>Safari 3.0</td>
-                                        <td>OSX.4+</td>
-                                        <td class="center">522.1</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Webkit</td>
-                                        <td>OmniWeb 5.5</td>
-                                        <td>OSX.4+</td>
-                                        <td class="center">420</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Webkit</td>
-                                        <td>iPod Touch / iPhone</td>
-                                        <td>iPod</td>
-                                        <td class="center">420.1</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Webkit</td>
-                                        <td>S60</td>
-                                        <td>S60</td>
-                                        <td class="center">413</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Opera 7.0</td>
-                                        <td>Win 95+ / OSX.1+</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Opera 7.5</td>
-                                        <td>Win 95+ / OSX.2+</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Opera 8.0</td>
-                                        <td>Win 95+ / OSX.2+</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Opera 8.5</td>
-                                        <td>Win 95+ / OSX.2+</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Opera 9.0</td>
-                                        <td>Win 95+ / OSX.3+</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Opera 9.2</td>
-                                        <td>Win 88+ / OSX.3+</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Opera 9.5</td>
-                                        <td>Win 88+ / OSX.3+</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Opera for Wii</td>
-                                        <td>Wii</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Nokia N800</td>
-                                        <td>N800</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Presto</td>
-                                        <td>Nintendo DS browser</td>
-                                        <td>Nintendo DS</td>
-                                        <td class="center">8.5</td>
-                                        <td class="center">C/A<sup>1</sup>
-                                        </td>
-                                    </tr>
-                                    <tr class="gradeC">
-                                        <td>KHTML</td>
-                                        <td>Konqureror 3.1</td>
-                                        <td>KDE 3.1</td>
-                                        <td class="center">3.1</td>
-                                        <td class="center">C</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>KHTML</td>
-                                        <td>Konqureror 3.3</td>
-                                        <td>KDE 3.3</td>
-                                        <td class="center">3.3</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>KHTML</td>
-                                        <td>Konqureror 3.5</td>
-                                        <td>KDE 3.5</td>
-                                        <td class="center">3.5</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeX">
-                                        <td>Tasman</td>
-                                        <td>Internet Explorer 4.5</td>
-                                        <td>Mac OS 8-9</td>
-                                        <td class="center">-</td>
-                                        <td class="center">X</td>
-                                    </tr>
-                                    <tr class="gradeC">
-                                        <td>Tasman</td>
-                                        <td>Internet Explorer 5.1</td>
-                                        <td>Mac OS 7.6-9</td>
-                                        <td class="center">1</td>
-                                        <td class="center">C</td>
-                                    </tr>
-                                    <tr class="gradeC">
-                                        <td>Tasman</td>
-                                        <td>Internet Explorer 5.2</td>
-                                        <td>Mac OS 8-X</td>
-                                        <td class="center">1</td>
-                                        <td class="center">C</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Misc</td>
-                                        <td>NetFront 3.1</td>
-                                        <td>Embedded devices</td>
-                                        <td class="center">-</td>
-                                        <td class="center">C</td>
-                                    </tr>
-                                    <tr class="gradeA">
-                                        <td>Misc</td>
-                                        <td>NetFront 3.4</td>
-                                        <td>Embedded devices</td>
-                                        <td class="center">-</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="gradeX">
-                                        <td>Misc</td>
-                                        <td>Dillo 0.8</td>
-                                        <td>Embedded devices</td>
-                                        <td class="center">-</td>
-                                        <td class="center">X</td>
-                                    </tr>
-                                    <tr class="gradeX">
-                                        <td>Misc</td>
-                                        <td>Links</td>
-                                        <td>Text only</td>
-                                        <td class="center">-</td>
-                                        <td class="center">X</td>
-                                    </tr>
-                                    <tr class="gradeX">
-                                        <td>Misc</td>
-                                        <td>Lynx</td>
-                                        <td>Text only</td>
-                                        <td class="center">-</td>
-                                        <td class="center">X</td>
-                                    </tr>
-                                    <tr class="gradeC">
-                                        <td>Misc</td>
-                                        <td>IE Mobile</td>
-                                        <td>Windows Mobile 6</td>
-                                        <td class="center">-</td>
-                                        <td class="center">C</td>
-                                    </tr>
-                                    <tr class="gradeC">
-                                        <td>Misc</td>
-                                        <td>PSP browser</td>
-                                        <td>PSP</td>
-                                        <td class="center">-</td>
-                                        <td class="center">C</td>
-                                    </tr>
-                                    <tr class="gradeU">
-                                        <td>Other browsers</td>
-                                        <td>All others</td>
-                                        <td>-</td>
-                                        <td class="center">-</td>
-                                        <td class="center">U</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!-- /.table-responsive -->
-							
-                        </div>
-                        <!-- /.panel-body -->
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Họ Và Tên</th>
+                                <th>Mã Lớp Học</th>
+                                <th>Học Bổng</th>
+                                <th>Học Phí</th>
+                                <th>Sửa</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>H16JB1</td>
+                                <td>0%</td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-success btn-circle" data-toggle="modal"
+                                            data-target="#myModal1" data-placement="bottom" title="Xem chi tiết"><i
+                                            class="fa fa-check"></i></button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-hidden="true">&times;</button>
+                                                    <h3 class="modal-title" id="myModalLabel">Chi tiết học phí - Nguyễn
+                                                        Văn A</h3>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí phải nộp: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input style="width:50%" type="text"
+                                                                                         class="form-control"
+                                                                                         id="disabledInput"
+                                                                                         value="10000000"
+                                                                                         disabled></div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 1: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="3000000"
+                                                                                             disabled></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="01/01/2017"
+                                                                                             disabled></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 2: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="2000000"
+                                                                                             disabled></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="08/01/2017"
+                                                                                             disabled></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 3: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="1000000"
+                                                                                             disabled></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="18/01/2017"
+                                                                                             disabled></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 4: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="4000000"
+                                                                                             disabled></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="22/01/2017"
+                                                                                             disabled></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí còn thiếu: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input type="text" style="width:50%"
+                                                                                         class="form-control"
+                                                                                         id="disabledInput"
+                                                                                         value="0" disabled></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default"
+                                                                data-dismiss="modal">Đóng
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+                                </td>
+
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary btn-circle" data-toggle="modal"
+                                            data-target="#myModal2" data-placement="bottom" title="Chỉnh sửa"><i
+                                            class="fa fa-pencil"></i></button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-hidden="true">&times;</button>
+                                                    <h3 class="modal-title" id="myModalLabel">Cập nhật học phí - Nguyễn
+                                                        Văn A</h3>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học bổng: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input style="width:50%" type="text"
+                                                                                         class="form-control"
+                                                                                         value="0%"
+                                                            ></div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí phải nộp: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input style="width:50%" type="text"
+                                                                                         class="form-control"
+                                                                                         value="10000000"
+                                                            ></div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 1: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="3000000"
+                                                                                             ></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="01/01/2017"
+                                                                                             ></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 2: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="2000000"
+                                                                                             ></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="08/01/2017"
+                                                                                             ></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 3: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="1000000"
+                                                                                             ></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="18/01/2017"
+                                                                                             ></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 4: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="4000000"
+                                                                                             ></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="22/01/2017"
+                                                                                             ></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí còn thiếu: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input type="text" style="width:50%"
+                                                                                         class="form-control"
+                                                                                         id="disabledInput"
+                                                                                         value="0"
+                                                                                         disabled></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default"
+                                                                data-dismiss="modal">Đóng
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Nguyễn Thị B</td>
+                                <td>H16JB1</td>
+                                <td>50%</td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-danger btn-circle" data-toggle="modal"
+                                            data-target="#myModal3" data-placement="bottom" title="Xem chi tiết"><i
+                                            class="fa fa-times"></i></button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-hidden="true">&times;</button>
+                                                    <h3 class="modal-title" id="myModalLabel">Chi tiết học phí - Nguyễn
+                                                        Thị B</h3>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí phải nộp: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input style="width:50%" type="text"
+                                                                                         class="form-control"
+                                                                                         id="disabledInput"
+                                                                                         value="5000000" disabled>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 1: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="2000000"
+                                                                                             disabled></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="04/01/2017"
+                                                                                             disabled></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 2: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="1000000"
+                                                                                             disabled></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             id="disabledInput"
+                                                                                             value="12/01/2017"
+                                                                                             disabled></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Ngày nộp học phí dự
+                                                                kiến: </label></div>
+                                                            <div class="col-lg-6"><input type="text" style="width:50%"
+                                                                                         class="form-control"
+                                                                                         id="disabledInput"
+                                                                                         value="23/01/2017"
+                                                                                         disabled></div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí còn thiếu: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input type="text" style="width:50%"
+                                                                                         class="form-control"
+                                                                                         id="disabledInput"
+                                                                                         value="2000000" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default"
+                                                                data-dismiss="modal">Đóng
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+                                </td>
+
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary btn-circle" data-toggle="modal"
+                                            data-target="#myModal4" data-placement="bottom" title="Chỉnh sửa"><i
+                                            class="fa fa-pencil"></i></button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-hidden="true">&times;</button>
+                                                    <h3 class="modal-title" id="myModalLabel">Cập nhật học phí - Nguyễn
+                                                        Thị B</h3>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học bổng: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input style="width:50%" type="text"
+                                                                                         class="form-control"
+                                                                                         value="50%" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí phải nộp: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input style="width:50%" type="text"
+                                                                                         class="form-control"
+                                                                                         value="5000000" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 1: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="2000000"
+                                                                                             ></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="04/01/2017"
+                                                                                             ></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí nộp lần 2: </label>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Học phí nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="1000000"
+                                                                                             ></div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="col-lg-6"><label>Ngày nộp: </label></div>
+                                                                <div class="col-lg-6"><input type="text"
+                                                                                             style="width:50%"
+                                                                                             class="form-control"
+                                                                                             value="12/01/2017"
+                                                                                             ></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Ngày nộp học phí dự
+                                                                kiến: </label></div>
+                                                            <div class="col-lg-6"><input type="text" style="width:50%"
+                                                                                         class="form-control"
+                                                                                         value="23/01/2017"
+                                                                                         ></div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="col-lg-6"><label>Học phí còn thiếu: </label>
+                                                            </div>
+                                                            <div class="col-lg-6"><input type="text" style="width:50%"
+                                                                                         class="form-control"
+                                                                                         id="disabledInput"
+                                                                                         value="2000000" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default"
+                                                                data-dismiss="modal">Đóng
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Nguyễn Văn C</td>
+                                <td>H16JB1</td>
+                                <td>0%</td>
+
+                                <td>
+                                    <button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"
+                                                                                                data-placement="bottom"
+                                                                                                title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>H16JB1</td>
+                                <td>0%</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"
+                                                                                                data-placement="bottom"
+                                                                                                title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Nguyễn Thị B</td>
+                                <td>H16JB1</td>
+                                <td>50%</td>
+                                <td>
+                                    <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"
+                                                                                               data-placement="bottom"
+                                                                                               title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Nguyễn Văn C</td>
+                                <td>H16JB1</td>
+                                <td>0%</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"
+                                                                                                data-placement="bottom"
+                                                                                                title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>H16JB1</td>
+                                <td>0%</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"
+                                                                                                data-placement="bottom"
+                                                                                                title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Nguyễn Thị B</td>
+                                <td>H16JB1</td>
+                                <td>50%</td>
+                                <td>
+                                    <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"
+                                                                                               data-placement="bottom"
+                                                                                               title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Nguyễn Văn C</td>
+                                <td>H16JB1</td>
+                                <td>0%</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"
+                                                                                                data-placement="bottom"
+                                                                                                title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>H16JB1</td>
+                                <td>0%</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"
+                                                                                                data-placement="bottom"
+                                                                                                title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Nguyễn Thị B</td>
+                                <td>H16JB1</td>
+                                <td>50%</td>
+                                <td>
+                                    <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"
+                                                                                               data-placement="bottom"
+                                                                                               title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Nguyễn Văn C</td>
+                                <td>H16JB1</td>
+                                <td>0%</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"
+                                                                                                data-placement="bottom"
+                                                                                                title="Xem chi tiết"></i>
+                                    </button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-pencil"
+                                                                                                data-placement="bottom"
+                                                                                                title="Chỉnh sửa"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!-- /.table-responsive -->
                     </div>
-                    <!-- /.panel -->
+                    <!-- /.panel-body -->
                 </div>
-                <!-- /.col-lg-12 -->
+                <!-- /.panel -->
             </div>
-            <!-- /.row -->
-			
+            <!-- /.col-lg-12 -->
         </div>
-        <!-- /#page-wrapper -->
+        <!-- /.row -->
 
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-wrapper -->
 
-
-<!-- jQuery -->
-<script src="../static/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="../static/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Plugin JavaScript -->
-<script src="../static/js/metisMenu.min.js"></script>
-
-    <!-- DataTables JavaScript -->
-    <script src="../static/js/jquery.dataTables.min.js"></script>
-    <script src="../static/js/dataTables.bootstrap.min.js"></script>
-    <script src="../static/js/dataTables.responsive.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="../static/js/sb-admin-2.js"></script>
-
-<!-- Page-Level Demo Scripts - Tables - Use for reference -->
-<script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-            responsive: true
-        });
-    });
-</script>
-
-</body>
-
-</html>
+</div>
+<!-- /#wrapper -->

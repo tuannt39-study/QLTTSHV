@@ -7477,3 +7477,116 @@ button.close {
     width: 250px;
     margin-top: 75px;
 }
+
+.add-acc {
+    position: inherit;
+    float: right;
+}
+
+.btn-add-acc {
+    color: #ffffff;
+    background-color: #2baae2;
+    border-color: #2baae2;
+    border-radius: 9px;
+}
+
+.search-for-manager-acc {
+    position: inherit;
+    display: table;
+    border-collapse: separate;
+    margin-top: 5%;
+}
+
+/*.active-deactive {
+    position: absolute;
+    width: 190px;
+    left: 80%;
+    margin-top: 9.5%;
+}
+
+.btn-active {
+    float: left;
+    width: 75px;
+    height: 35px;
+}
+
+.btn-deactive {
+    !*float: right;*!
+    width: 102px;
+    height: 35px;
+    margin-left: 46%;
+}*//*form-active-deactive*/
+
+.btn-active-css {
+    border-color: #00b1ff;
+    border-radius: 7px;
+    color: #ffffff;
+    background: #4a82ec;
+}
+
+.btn-deactive-css {
+    border-color: #afb3b5;
+    border-radius: 7px;
+    color: #ffffff;
+    background: #c2c2c2;
+}
+
+.modal-them-tai-khoan {
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    color: #48b5e6;
+    text-shadow: 1px 1px 1px #bdbdbd;
+    border: 1px solid #2baae2;
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(255, 255, 255, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+    -webkit-transition: box-shadow .5s ease;
+    -moz-transition: box-shadow .5s ease;
+    -o-transition: box-shadow .5s ease;
+    -ms-transition: box-shadow .5s ease;
+    transition: box-shadow .5s ease;
+}
+
+.list-movie-filter{
+    margin-top: 9%;
+    padding: 10px 0px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border: 1px solid #4582ec;
+    background: #4582ec;
+    border-radius: 10px;
+}
+
+.list-movie-filter .list-movie-filter-main{
+    color: #b7b7b7;
+    display: block;
+    text-align: center;
+}
+
+.form {
+    display: block;
+    margin-top: 0em;
+}
+
+.list-movie-filter .list-movie-filter-main label{
+    display: block;
+}
+
+.list-movie-filter .list-movie-filter-item{
+    float: left;
+    margin: 0px 3px;
+    width: 235px;
+}
+
+.clear {
+    clear: both;
+}
+
+.btn-filter-movie{
+    padding: 8px !important;
+    position: relative;
+    top: 24px;
+}

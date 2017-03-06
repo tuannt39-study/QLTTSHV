@@ -6,14 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <jsp:include page="head-html.jsp"></jsp:include>
-    <title>Title</title>
-</head>
-<body>
-<jsp:include page="menu.jsp"></jsp:include>
-
+<div id="wrapper">
 <div id="page-wrapper">
 
     <div class="row">
@@ -155,21 +148,4 @@
     <%--danh-sach-tai-khoan--%>
 </div>
 <%--body-quanly-taikhoan--%>
-<!-- jQuery -->
-<script src="../static/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="../static/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Plugin JavaScript -->
-<script src="../static/css/metisMenu.min.js"></script>
-
-<!-- Morris Charts JavaScript -->
-<script src="../static/js/raphael.min.js"></script>
-<script src="../static/js/morris.min.js"></script>
-<script src="../static/js/morris-data.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="../static/js/sb-admin-2.js"></script>
-</body>
-</html>
+</div>

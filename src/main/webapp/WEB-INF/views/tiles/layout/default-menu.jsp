@@ -236,13 +236,13 @@
                     <a href="/dashboard">Trang chủ</a>
                 </li>
                 <li>
-                    <a href="#">Tài Khoản<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-users" aria-hidden="true" style="font-size: 18px;"></i> Tài Khoản<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/thongtincanhan">Thông Tin Cá Nhân</a>
+                            <a href="/thongtincanhan"><i class="fa fa-user" aria-hidden="true" style="font-size: 20px; margin: 3px;"></i> Thông Tin Cá Nhân</a>
                         </li>
                         <li>
-                            <a href="morris.html">Quản Lý Tài Khoản</a>
+                            <a href="/quanlytaikhoan"><img src="../static/img/icon-man-acc.png" width="20px"> Quản Lý Tài Khoản</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
@@ -253,15 +253,35 @@
                 <li>
                     <a href="/danhsachgiangvien">Giảng Viên - Trợ Giảng</a>
                 </li>
-
                 <li>
-                    <a href="#">Lớp Học</a>
+                    <a href="#">Lớp Học<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="panels-wells.html">Lịch học</a>
+                        </li>
+                        <li>
+                            <a href="buttons.html">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="notifications.html">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="typography.html">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="icons.html"> Buttons</a>
+                        </li>
+                        <li>
+                            <a href="grid.html">Buttons</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
                 </li>
                 <li>
                     <a href="#">Học viên<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/hocphi">Học Phí</a>
+                            <a href="#">Second Level Item</a>
                         </li>
                         <li>
                             <a href="#">Second Level Item</a>
@@ -298,6 +318,9 @@
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="/hocphi">Học Phí</a>
                 </li>
             </ul>
         </div>

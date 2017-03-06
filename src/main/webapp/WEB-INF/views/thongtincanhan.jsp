@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-
+<div id="wrapper">
     <div id="page-wrapper">
 
         <div class="row">
@@ -166,30 +166,4 @@
         </div>
     </div>
     <!-- /#page-wrapper -->
-
-
-<!-- jQuery -->
-<script src="../static/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="../static/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Plugin JavaScript -->
-<script src="../static/js/metisMenu.min.js"></script>
-
-<!-- Flot Charts JavaScript -->
-<%--<script src="../static/js/excanvas.min.js"></script>
-<script src="../static/js/jquery.flot.js"></script>
-<script src="../static/js/jquery.flot.pie.js"></script>
-<script src="../static/js/jquery.flot.resize.js"></script>
-<script src="../static/js/jquery.flot.time.js"></script>
-<script src="../static/js/jquery.flot.tooltip.min.js"></script>
-<script src="../static/js/flot-data.js"></script>--%>
-
-<!-- Custom Theme JavaScript -->
-<script src="../static/js/sb-admin-2.js"></script>
-
-</body>
-
-</html>
-
+</div>

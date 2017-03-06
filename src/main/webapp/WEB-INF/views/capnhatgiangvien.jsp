@@ -1,5 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<div id="wrapper">
 <div id="page-wrapper">
     <div class="row">
         <div class="panel panel-primary" style="margin-top: 1%">
@@ -79,7 +80,7 @@
                             </tr>
                         </div>
 
-                        <div class="col-xs-2"  style="margin-left: -1%;width: 14%;height: 22%;">
+                        <div class="col-xs-2" style="margin-left: -1%;width: 14%;height: 22%;">
                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
                                 <i class="glyphicon glyphicon-plus" style="color: #dff0d8"></i>
                             </button>
@@ -118,12 +119,9 @@
             </div>
         </div>
     </div>
-
 </div>
-<script src="../static/js/jquery.min.js"></script>
+</div>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="../static/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function(){
         $('#view').click(function () {

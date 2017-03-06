@@ -7,6 +7,7 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<div id="wrapper">
 <div id="page-wrapper">
     <div class="row">
         <div class="panel panel-primary" style="margin-top: 15px">
@@ -84,25 +85,19 @@
                     </tr>
                     </tbody>
                 </table>
-                <a href="#"class="btn btn-primary" id="update">
+                <a href="#" class="btn btn-primary" id="update">
                     <span><i class="glyphicon glyphicon-edit" ></i></span>
                 </a>
             </div>
         </div>
-        <form>
-
-        </form>
     </div>
 </div>
-<script src="../static/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="../static/js/bootstrap.min.js"></script>
+</div>
+<!-- /#wrapper -->
 <script>
     $(document).ready(function(){
         $('#update').click(function () {
             window.location.href = '/capnhatgiangvien/GV01';
         });
     });
-
 </script>

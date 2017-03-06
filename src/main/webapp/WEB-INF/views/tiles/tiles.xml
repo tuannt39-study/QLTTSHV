@@ -29,6 +29,10 @@
         <put-attribute name="title" value="Thông tin cá nhân"></put-attribute>
         <put-attribute name="body" value="/WEB-INF/views/thongtincanhan.jsp"></put-attribute>
     </definition>
+    <definition name="quanlytaikhoan" extends="default">
+        <put-attribute name="title" value="Quản lý tài khoản"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/quanlytaikhoan.jsp"></put-attribute>
+    </definition>
     <definition name="hocphi" extends="default">
         <put-attribute name="title" value="Học phí"></put-attribute>
         <put-attribute name="body" value="/WEB-INF/views/hocphi.jsp"></put-attribute>
