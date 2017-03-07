@@ -19,4 +19,8 @@ public class BackOffice {
     public String pageTTS(){
         return "thuctapsinh";
     }
+    @RequestMapping(value = "/thaydoithongtincanhan",method = RequestMethod.GET)
+    public String pageThongTinCaNhan(){
+        return "thaydoithongtincanhan";
+    }
 }
